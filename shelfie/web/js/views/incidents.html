@@ -1,0 +1,35 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+ <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+ 
+ <div class="oj-hybrid-padding">
+   <div class="oj-flex search-book-section">
+      <oj-input-text id="search-book" value="{{value}}" placeholder="search for book title, author..."></oj-input-text>
+
+      <oj-button id="search-book-button" on-click="[[searchForMatchingBooks]]">SEARCH</oj-button>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-hover" data-bind="visible: matchingBooks().length > 0">
+    <tbody data-bind="foreach: matchingBooks">
+      <tr class="book-search-result">
+        <td>
+          <img data-bind="attr: {src: $data['image']}" style="width: 75px; height: 100px;">
+        </td>
+
+        <td>
+          <p data-bind="text: title" style="font-size: 1.1em"></p>
+        </td>
+
+        <td class="donate-button">
+          <button 
+          class="btn btn-info" 
+          data-bind="attr: {value: $data}, click: $parent.addBookToDatabase">ADD TO SHELF</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
