@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const flash = require('express-flash');
 const session = require('express-session');
-const models = require('models');
+const models = require('./models');
 const mongoose = require('mongoose');
 const app = express();
 
