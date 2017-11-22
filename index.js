@@ -5,7 +5,7 @@ var app = express();
 
 const jsonParser = require("body-parser").json;
 app.use(jsonParser());
-
+app.use(express.static('shelfie/web'))
 const Models = require("./models");
 const Routes = require("./routes");
 const errorHandler = require("./error-handler");
