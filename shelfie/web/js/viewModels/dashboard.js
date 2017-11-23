@@ -19,7 +19,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
 
       $.ajax({
         type : "GET",
-        url : 'https://shelfie-api.herokuapp.com/api/books',
+        url : '/api/books',
         dataType : "json",
       success : function (books) {
         //data that is grabbed from the database
