@@ -56,7 +56,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojinputtext',
           data: JSON.stringify(book),
           type: "POST",
           contentType: "application/json",
-          success: function(result) { alert('Thank you for your contribution!') }
+          success: function() { alert('Thank you for your contribution!') }
         })
       }
 

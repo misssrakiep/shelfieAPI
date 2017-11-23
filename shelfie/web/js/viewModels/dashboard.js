@@ -29,14 +29,14 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
 
       self.searchBooks = ko.computed(function() {
         if (self.query()) {
-          return self.books().filter(book => book.title.toLowerCase().includes(self.query()));
+          return self.books().filter(book => book.title.toLowerCase().includes(self.query().toLowerCase()));
         }
 
         return self.books();
       })
 
-swap = function() {
-  alert('This book has been added to your swap list. Thank you!')
+self.swap = function() {
+  alert('Please proceed to book collection instructions.')
 }
       /**
        * Optional ViewModel method invoked when this ViewModel is about to be
